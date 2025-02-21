@@ -1,0 +1,79 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('parking-lot-bg.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 18px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .parking-lot {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .slot {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slot p {
+    font-size: 16px;
+  }
+  
+  .slot .status {
+    font-weight: bold;
+  }
+  
+  .slot[data-status="available"] {
+    background-color: #27ae60; /* Green for available */
+    color: white;
+  }
+  
+  .slot[data-status="occupied"] {
+    background-color: #e74c3c; /* Red for occupied */
+    color: white;
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
