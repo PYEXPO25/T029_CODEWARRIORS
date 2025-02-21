@@ -1,4 +1,4 @@
-from django.urls import path
+from ips.urls import path
 from . import views
 from ips import views as iot_views
 
