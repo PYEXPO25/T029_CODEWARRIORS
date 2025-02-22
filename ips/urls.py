@@ -16,7 +16,8 @@ Including another URLconf
 """
 
 
-from django.urls import path
+from django.urls import path,include
+from django.contrib import admin
 from . import views
 
 urlpatterns = [
@@ -25,3 +26,10 @@ urlpatterns = [
     path('available-slots/',views.available_slots, name='available_slots'),
     path('check-expired/', views.check_expired_reservations, name='check_expired_reservations'),
 ]
+# myproject/urls.py
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('slotfinder.urls')),  # Include myapp URLs
+]
+

@@ -1,79 +1,77 @@
-/* Basic Reset */
-* {
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('carparking.jpg');
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-image: url('parking-lot-bg.jpg'); /* Add your background image path */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
   }
   
   header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #333;
     color: white;
-    padding: 20px 0;
+    text-align: center;
+    padding: 20px;
   }
   
-  header h1 {
-    margin-bottom: 10px;
+  h1 {
+    margin: 0;
   }
   
-  header p {
-    font-size: 18px;
-  }
-  
-  .container {
+  main {
     display: flex;
     justify-content: center;
     margin-top: 30px;
   }
   
   .parking-lot {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     gap: 20px;
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  .slot {
-    background-color: #ecf0f1;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .slot p {
-    font-size: 16px;
+  .parking-slot {
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(10, 10, 10, 0.1);
   }
   
-  .slot .status {
+  .parking-slot p {
+    margin: 10px 0;
     font-weight: bold;
   }
   
-  .slot[data-status="available"] {
-    background-color: #27ae60; /* Green for available */
+  .status {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
     color: white;
   }
   
-  .slot[data-status="occupied"] {
-    background-color: #e74c3c; /* Red for occupied */
-    color: white;
+  /* Available Slot (Yellow) */
+  .available .status {
+    background-color: #FFEB3B; /* Yellow */
+  }
+  
+  /* Booked Slot (Green) */
+  .booked .status {
+    background-color: #4CAF50; /* Green */
+  }
+  
+  /* Unavailable Slot (Red) */
+  .unavailable .status {
+    background-color: #F44336; /* Red */
   }
   
   footer {
-    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    text-decoration-color: #f1f1f1;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #333;
     color: white;
-    padding: 15px 0;
-    margin-top: 40px;
-  }
-  
-  footer p {
-    font-size: 14px;
   }

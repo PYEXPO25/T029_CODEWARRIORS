@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Parking Slots</title>
+  <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Smart Car Parking System</h1>
+  </header>
+
+  <main>
+    <div id="user-info"></div> <!-- Placeholder for username and email -->
+
+    <h2>Parking Slots</h2>
+    <div class="parking-lot">
+      <!-- Slot 1 (Available) -->
+      <div class="parking-slot available">
+        <p>Slot 1</p>
+        <div class="status">Available</div>
+      </div>
+
+      <!-- Slot 2 (Booked) -->
+      <div class="parking-slot booked">
+        <p>Slot 2</p>
+        <div class="status">Booked</div>
+      </div>
+
+      <!-- Slot 3 (Unavailable) -->
+      <div class="parking-slot unavailable">
+        <p>Slot 3</p>
+        <div class="status">Unavailable</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smart Parking System</p>
+  </footer>
+
+  <script>
+    // Get username and email from the URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get('username');
+    const email = params.get('email');
+
+    // Display username and email at the top of the page
+    document.getElementById('user-info').innerHTML = <h3>Welcome, ${username}!</h3><p>Your email: ${email}</p>;
+  </script>
+</body>
+</html>

@@ -3,36 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Car Parking System</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="{% static 'myapp/slotfinder/style.css' %}">
 </head>
 <body>
-  <header>
-    <h1>Smart Car Parking System</h1>
-    <p>Check the parking slot availability in real-time.</p>
-  </header>
+  <h1>Sign Up</h1>
+  
+  <!-- Form to get username and email -->
+  <form action="parking.html" method="GET">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
 
-  <div class="container">
-    <div class="parking-lot">
-      <div class="slot" id="slot1" data-status="available">
-        <p>Slot 1</p>
-        <p>Status: <span class="status">Available</span></p>
-      </div>
-      <div class="slot" id="slot2" data-status="occupied">
-        <p>Slot 2</p>
-        <p>Status: <span class="status">Occupied</span></p>
-      </div>
-      <div class="slot" id="slot3" data-status="available">
-        <p>Slot 3</p>
-        <p>Status: <span class="status">Available</span></p>
-      </div>
-    </div>
-  </div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
 
-  <footer>
-    <p>&copy; 2025 Smart Car Parking System</p>
-  </footer>
-
-  <script src="app.js"></script>
+    <button type="submit">Next</button>
+  </form>
 </body>
 </html>
