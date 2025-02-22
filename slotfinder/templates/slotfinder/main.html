@@ -1,53 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Parking Slots</title>
-  <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking System - Parking Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        h2 {
+            text-align: center;
+            color:#116c16
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 18px;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #66BB6A;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to the Smart Car Parking System</h1>
-  </header>
 
-  <main>
-    <div id="user-info"></div> <!-- Placeholder for username and email -->
+    <div class="container">
+        <h1>Arriving Time</h1>
+        <form action="page3.html" method="GET">
+            <div class="form-group">
+                <label for="duration">Arriving Time (minutes):</label>
+                <input type="radio" id="outdoor" name="parking" value="Outdoor">
+                <label for="outdoor">30</label><br>
+                <input type="radio" id="outdoor" name="parking" value="Outdoor">
+                <label for="outdoor">60</label><br>
+                <input type="radio" id="outdoor" name="parking" value="Outdoor">
+                <label for="outdoor">120</label><br>
+            </div>
+        <h2>30 min - no charge</h2><br>
+        <h2>60 min - 30 Rs</h2><br>
+        <h2>120 min - 50 Rs</h2>
 
-    <h2>Parking Slots</h2>
-    <div class="parking-lot">
-      <!-- Slot 1 (Available) -->
-      <div class="parking-slot available">
-        <p>Slot 1</p>
-        <div class="status">Available</div>
-      </div>
-
-      <!-- Slot 2 (Booked) -->
-      <div class="parking-slot booked">
-        <p>Slot 2</p>
-        <div class="status">Booked</div>
-      </div>
-
-      <!-- Slot 3 (Unavailable) -->
-      <div class="parking-slot unavailable">
-        <p>Slot 3</p>
-        <div class="status">Unavailable</div>
-      </div>
+            <button type="submit" class="btn">Next</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2025 Car Parking System. All rights reserved.</p>
+        </div>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Smart Parking System</p>
-  </footer>
-
-  <script>
-    // Get username and email from the URL parameters
-    const params = new URLSearchParams(window.location.search);
-    const username = params.get('username');
-    const email = params.get('email');
-
-    // Display username and email at the top of the page
-    document.getElementById('user-info').innerHTML = <h3>Welcome, ${username}!</h3><p>Your email: ${email}</p>;
-  </script>
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Slot Availability</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .slot-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columns */
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+        .slot {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 80px;
+            font-weight: bold;
+        }
+        .available {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .booked {
+            background-color: #FFEB3B; /* Yellow */
+            color: black;
+        }
+        .unavailable {
+            background-color: #F44336; /* Red */
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Parking Slot Availability</h1>
+        <form action="page4.html" method="GET"><br>
+            <button type="submit" class="btn">Reserve Booking</button>
+        </form>
+        
+        <div class="slot-grid">
+            <!-- Slot 1: Booked -->
+            <div class="slot booked">Booked</div>
+
+            <!-- Slot 2: Unavailable -->
+            <div class="slot unavailable">Unavailable</div>
+
+            <!-- Slot 3: Available -->
+            <div class="slot available">Available</div>
+
+            <!-- Slot 4: Available -->
+            <div class="slot available">Available</div>
+
+            <!-- Slot 5: Booked -->
+            <div class="slot booked">Booked</div>
+
+            <!-- Slot 6: Unavailable -->
+            <div class="slot unavailable">Unavailable</div>
+
+            <!-- Slot 7: Available -->
+            <div class="slot available">Available</div>
+
+            <!-- Slot 8: Available -->
+            <div class="slot available">Available</div>
+
+            <!-- Slot 9: Booked -->
+            <div class="slot booked">Booked</div>
+
+            <!-- Slot 10: Unavailable -->
+            <div class="slot unavailable">Unavailable</div>
+
+            <!-- Slot 11: Available -->
+            <div class="slot available">Available</div>
+
+            <!-- Slot 12: Available -->
+            <div class="slot available">Available</div>
+        </div>
+        
+
+        <div class="footer">
+            <p>&copy; 2025 Car Parking System. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>

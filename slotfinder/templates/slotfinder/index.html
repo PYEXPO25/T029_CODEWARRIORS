@@ -1,25 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="{% static 'myapp/slotfinder/style.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking System - Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 18px;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #66BB6A;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-  <h1>Sign Up</h1>
-  
-  <!-- Form to get username and email -->
-  <form action="parking.html" method="GET">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <br><br>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br><br>
+    <div class="container">
+        <h1>Sign In to Car Parking System</h1>
+        <form action="main.html" method="GET">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2025 Car Parking System. All rights reserved.</p>
+        </div>
+    </div>
 
-    <button type="submit">Next</button>
-  </form>
 </body>
 </html>
