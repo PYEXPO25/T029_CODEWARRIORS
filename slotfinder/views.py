@@ -4,10 +4,6 @@ from django.utils import timezone
 from slotfinder.models import ParkingSlot, Reservation, Payment
 from datetime import timedelta
 
-
-from django.http import JsonResponse
-from slotfinder.models import ParkingSlot
-
 # API to update parking slot availability from IoT device
 def update_parking_slot_status(request, slot_id):
     slot = ParkingSlot.objects.get(id=slot_id)
